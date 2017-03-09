@@ -1,0 +1,12 @@
+// ----- JAVASCRIPT ----- //
+
+$(document).ready(function() {
+  $(".clicky").click(function() {
+		$(".switchy").toggleClass("classy")
+	})
+})
+
+// ------ HTML ----- //
+
+<p class="clicky">Click me!</p>
+<p class="switchy">I switch classes!</p>
