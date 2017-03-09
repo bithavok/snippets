@@ -10,3 +10,4 @@ $(document).ready(function() {
 
 <p class="clicky">Click me!</p>
 <p class="switchy">I switch classes!</p>
+
