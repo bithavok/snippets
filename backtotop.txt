@@ -3,9 +3,13 @@
 
 // JS
 $(".backtotop").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
+  $("html, body").animate({ scrollTop: 0 }, "slow")
+  return false
 });
+
+var checkScrollPosition = () => $(window).scrollTop() > 250 ? $('.backtotop').addClass("show") : $('.backtotop').removeClass("show")
+$(window).scroll(checkScrollPosition)
+checkScrollPosition()
 
 // CSS
 .backtotop {
