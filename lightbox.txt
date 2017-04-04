@@ -1,0 +1,31 @@
+// HTML
+<div class="lightbox-trigger" data-lb-name="lb-one">
+  <!-- Profile card body, content... -->
+</div>
+
+<div class="lightbox" data-lb-name="lb-one">
+  <a class="lightbox-trigger" data-lb-name="lb-one">X</a> <!-- The close button -->
+
+  <div class="lightbox-body">
+    <!-- Details to expand, etc. -->
+  </div>
+</div>
+
+// JS
+$(document).ready(() => {
+  $(".lightbox-trigger").click(function() {
+    $(".lightbox[data-lb-name="+$(this).data("lb-name")+"]").toggleClass("open")
+  })
+})
+
+// I'll leave the CSS to you =)
+//
+// Definitions:
+// .lightbox
+//    The lightbox itself. Includes the close button and any content.
+// .lightbox-trigger
+//    Anything you want to toggle the lightbox
+// data-lb-name
+//    Links triggers and lightboxes together. Just make sure it's on both and the value matches, and it'll work.
+//
+// Anything other than those you can change without worrying about the JS.
